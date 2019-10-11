@@ -6,5 +6,8 @@ class ErrorThrow extends Controller {
 
         parent::__construct();
         echo 'This is an error!';
+
+        $this->view->msg = 'This page do not exist';
+        $this->view->render('error/index');
     }
 }
