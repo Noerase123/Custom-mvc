@@ -1,5 +1,7 @@
 <?php
 
+namespace libs\models;
+
 class Model 
 {
     

@@ -1,5 +1,10 @@
 <?php
 
+// namespace controllers;
+
+use libs\controllers\Controller;
+use models\Help_Models;
+
 class Help extends Controller {
 
     public function __construct() {

@@ -1,5 +1,7 @@
 <?php
 
+namespace libs\views;
+
 class View {
     
     function __construct() {

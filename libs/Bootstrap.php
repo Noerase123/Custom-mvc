@@ -1,5 +1,7 @@
 <?php
 
+// namespace libs\bootstrap;
+
 class Bootstrap {
 
     function __construct() {
@@ -10,7 +12,7 @@ class Bootstrap {
         // print_r($url);
 
         if (empty($url[0])) {
-            require 'controllers/index.php';
+            require 'controllers/Index.php';
             $controller = new Index();
             return false;
         }

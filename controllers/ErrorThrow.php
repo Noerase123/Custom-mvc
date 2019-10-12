@@ -1,5 +1,9 @@
 <?php
 
+// namespace controllers;
+
+use libs\controllers\Controller;
+
 class ErrorThrow extends Controller {
     
     function __construct() {
