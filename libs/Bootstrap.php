@@ -1,6 +1,8 @@
 <?php
 
-// namespace libs\bootstrap;
+namespace libs\bootstrap;
+
+use controllers\Index;
 
 class Bootstrap {
 
@@ -12,8 +14,9 @@ class Bootstrap {
         // print_r($url);
 
         if (empty($url[0])) {
-            require 'controllers/Index.php';
+            // require 'controllers/Index.php';
             $controller = new Index();
+            $controller->index();
             return false;
         }
 
@@ -22,7 +25,7 @@ class Bootstrap {
         if(file_exists($file)) {
             require $file;
         } else {
-            require 'controllers/ErrorThrow.php';
+            // require 'controllers/ErrorThrow.php';
             $controller = new ErrorThrow();
             return false;
         }
@@ -35,6 +38,9 @@ class Bootstrap {
         else {
             if (isset($url[1])) {
                 $controller->{$url[1]}();
+            }
+            else {
+                $controller->index();
             }
         }
     }

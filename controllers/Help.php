@@ -3,7 +3,7 @@
 // namespace controllers;
 
 use libs\controllers\Controller;
-use models\Help_Models;
+use models\Help_Model;
 
 class Help extends Controller {
 
@@ -11,12 +11,13 @@ class Help extends Controller {
         
         parent::__construct();
 
+    }
+
+    function index() {
         $this->view->render('help/index');
     }
 
-    public function index() {
-        
-        echo 'this is my index function inside controller <br>';
+    public function other() {
 
         require 'models/help_model.php';
 
