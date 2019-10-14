@@ -22,4 +22,4 @@ class Method {
     }
 }
 
-$route = new routes\Method();
+$route = new Method();

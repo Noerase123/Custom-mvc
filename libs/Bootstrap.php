@@ -1,6 +1,6 @@
 <?php
 
-namespace libs\bootstrap;
+// namespace libs\bootstrap;
 
 use controllers\Index;
 

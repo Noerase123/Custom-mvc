@@ -13,7 +13,7 @@ class Login extends Controller {
 
         $this->method = new Methods();
 
-        $this->model = new Help_Model();
+        // $this->model = new Help_Model();
 
     }
 
@@ -25,10 +25,5 @@ class Login extends Controller {
     function auth() {
 
         $this->method->redirect('index.index');
-    }
-
-    function helpOther() {
-
-        $this->model;
     }
 }
