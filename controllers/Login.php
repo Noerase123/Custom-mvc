@@ -13,17 +13,38 @@ class Login extends Controller {
 
         $this->method = new Methods();
 
-        // $this->model = new Help_Model();
-
     }
 
     function index() {
         
-        $this->method->redirect('login.index');
+        $this->view->loginPage();
     }
 
-    function auth() {
+    function login_user() {
+        
+        $email = $_POST['email'];
 
-        $this->method->redirect('index.index');
+        $table = 'tbl_post';
+
+        $query = "SELECT username FROM $table WHERE username='$email' ";
+
+        $success = $this->helper->customQuery($query);
+
+        if ($success) {
+            session_start();
+            $_SESSION['user'] = $email;
+            $this->view->render('home/index');
+        } else {
+            $this->view->loginPage('login/index');
+        }
     }
+
+    function logout() {
+
+        session_start();
+        session_destroy();
+        $this->view->loginPage('login/index');
+
+    }
+    
 }

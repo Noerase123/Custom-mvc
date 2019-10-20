@@ -1,15 +1,24 @@
-<form class="container form-css" method="post" action="<?php echo URL;?>Help">
-  <div class="form-group">
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
 
-    <h3>
-        Login your Account
-    </h3>
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="<?php echo IMG?>google.svg" width="50" height="50" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form method="POST" action="<?php echo URL;?>Login/login_user">
+      <input required type="email" id="login" class="fadeIn second" name="email" placeholder="email">
+      <input required type="password" id="password" class="fadeIn third" name="pass" placeholder="password">
+      <input type="submit" class="fadeIn fourth" name="submit_login" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="<?php echo URL.'Register';?>">Register here!</a> &nbsp&nbsp&nbsp&nbsp
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
   </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <input type="submit" class="btn btn-primary form-control" value="Submit">
-</form>
+</div>

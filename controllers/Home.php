@@ -5,7 +5,7 @@
 use libs\controllers\Controller;
 use models\Help_Model;
 
-class Help extends Controller {
+class Home extends Controller {
 
     public function __construct() {
         
@@ -14,7 +14,14 @@ class Help extends Controller {
     }
 
     function index() {
-        $this->view->render('help/index');
+        
+        if (isset($_SESSION['user'])) {
+
+            $this->view->render('home/index');
+        } else {
+            
+            $this->view->loginPage();
+        }
     }
 
     public function other() {

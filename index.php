@@ -1,11 +1,8 @@
 <?php
 
-define('LIBS','libs/');
-define('FW','framework/');
-define('MODEL','models/');
-define('CONTROLLER','controllers/');
-define('CONFIG','config/');
-define('ROUTES','routes/');
+// configurations
+require 'config/paths.php';
+require CONFIG.'databases.php';
 
 // libraries
 require LIBS.'Bootstrap.php';
@@ -26,10 +23,6 @@ require MODEL.'help_model.php';
 // controllers
 require CONTROLLER.'Index.php';
 require CONTROLLER.'ErrorThrow.php';
-
-// configurations
-require CONFIG.'databases.php';
-require CONFIG.'paths.php';
 
 // routes
 require ROUTES.'method.php';

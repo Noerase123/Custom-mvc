@@ -14,4 +14,9 @@ class Index extends Controller  {
     function index() {
         $this->view->render('index/index');
     }
+
+    function login() {
+        header("location: ".URL."Login");
+    }
+
 }
