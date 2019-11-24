@@ -1,5 +1,3 @@
-# MVC-framework
+# This project was a custom PHP MVC project made for acquiring root knowledge with mvc.
 
-https://www.youtube.com/watch?v=Aw28-krO7ZM
-
-tutorial
+<h5>integrated with MySql database</h5>
